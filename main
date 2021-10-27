@@ -89,6 +89,4 @@ mkdir -p ~/.config/lxsession/LXDE-pi
 cd -
 python3 -m adjust-browser-auto-start-script
 
-python3 -c "from colorama import Fore;print();print(Fore.BLUE+'restarting pi...');"
-sleep 1
-shut r
+python3 -c "from colorama import Fore;print();print(Fore.GREEN+'success! Restart rpi now');"
