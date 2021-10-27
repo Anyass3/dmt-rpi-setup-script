@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-python3 -c "from colorama import Fore;print();print(Fore.GREEN+'logging in as root\n');"
-sudo su
-
 python3 -m ssh-config
 systemctl restart ssh
 
@@ -12,7 +9,7 @@ mkdir -p ~/.ssh
 touch ~/.ssh/authorized_keys
 python3 -m public_key
 
-python3 -m setup-pi
+python3 -m pi-config
 
 
 python3 -c "from colorama import Fore;print();print(Fore.CYAN+'🌀 Installing linux packages');"
@@ -70,8 +67,9 @@ python3 -m pulse-audio-setup
 systemctl enable pulseaudio
 systemctl start pulseaudio
 
-exit
 
+
+cd /home/pi
 python3 -c "from colorama import Fore;print();print(Fore.CYAN+'Adjusting autostart script for browser');"
 mkdir -p ~/.config/lxsession/LXDE-pi
 python3 -m adjust-browser-auto-start-script
