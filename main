@@ -86,6 +86,7 @@ cd /home/pi
 python3 -c "from colorama import Fore;print();print(Fore.CYAN+'Adjusting autostart script for browser');"
 python3 -c "from colorama import Fore;print(Fore.RESET)"
 mkdir -p ~/.config/lxsession/LXDE-pi
+cd -
 python3 -m adjust-browser-auto-start-script
 
 python3 -c "from colorama import Fore;print();print(Fore.BLUE+'restarting pi...');"
