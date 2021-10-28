@@ -19,8 +19,8 @@ python3 -m pi-config
 python3 -c "from colorama import Fore;print();print(Fore.CYAN+'🌀 Installing linux packages');"
 python3 -c "from colorama import Fore;print(Fore.RESET)"
 sleep 1
-sudo apt-get update
-sudo apt-get -y install build-essential tar unzip curl git screen ntp zip tree lsof colordiff rsync net-tools cmake arp-scan netcat nmon highlight evtest iperf iperf3 jq mosquitto mosquitto-clients socat
+apt-get update
+apt-get -y install build-essential tar unzip curl git screen ntp zip tree lsof colordiff rsync net-tools cmake arp-scan netcat nmon highlight evtest iperf iperf3 jq mosquitto mosquitto-clients socat
 
 
 python3 -c "from colorama import Fore;print();print(Fore.CYAN+'🌀 INSTALLING node.js ENVIRONMENT');"
@@ -33,11 +33,15 @@ sleep 1
 chmod u+s /usr/bin/arp-scan
 chmod u+s /usr/sbin/arp-scan
 
+python3 -c "from colorama import Fore;print();print(Fore.CYAN+'🌀 INSTALLING MPV');"
+python3 -c "from colorama import Fore;print(Fore.RESET)"
+apt install mpv
+
 python3 -c "from colorama import Fore;print();print(Fore.CYAN+'removing Avahi-daemon which is the frequent source of networking issues.');"
 sleep 1
-sudo apt-get -y remove avahi-daemon
+apt-get -y remove avahi-daemon
 
-python3 -c "from colorama import Fore;print();print(Fore.MAGENTA+'🌀 INSTALLING DMT from unippath');"
+python3 -c "from colorama import Fore;print();print(Fore.MAGENTA+'🌀 INSTALLING DMT from uniqpath');"
 python3 -c "from colorama import Fore;print(Fore.RESET)"
 git clone https://github.com/uniqpath/dmt.git ~/.dmt
 cd ~/.dmt
